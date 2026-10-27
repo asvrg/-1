@@ -3,113 +3,488 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="AIの活用術、ネット詐欺対策、スマホの便利技など、デジタル社会を賢く生きるための実用情報を紹介します。">
+<meta name="description" content="ネット詐欺対策、AIの活用方法、スマートフォンの便利技、プライバシー保護など、デジタル社会を安全・便利に生きるための実用情報を初心者向けに解説します。">
+<meta name="theme-color" content="#152b4a">
 <title>デジタル生活ラボ｜知って得するデジタル活用術</title>
+
 <style>
 *{box-sizing:border-box}
-body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans",Meiryo,sans-serif;color:#202938;background:#f5f7fb;line-height:1.8}
-header{background:#152b4a;color:white;padding:28px 20px}
-header h1{margin:0;font-size:27px}
-header p{margin:5px 0 0;color:#d8e5f8;font-size:14px}
-nav{background:#fff;padding:12px 16px;border-bottom:1px solid #e3e8ef;display:flex;gap:18px;flex-wrap:wrap}
+html{scroll-behavior:smooth;scroll-padding-top:20px}
+body{
+  margin:0;
+  font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans",
+  "Yu Gothic",Meiryo,sans-serif;
+  color:#202938;
+  background:#f5f7fb;
+  line-height:1.9;
+  overflow-wrap:anywhere
+}
+a{color:#2454a6}
+header{background:#152b4a;color:white;padding:30px 20px}
+.header-inner{max-width:850px;margin:auto}
+header h1{margin:0;font-size:29px;line-height:1.5}
+header p{margin:8px 0 0;color:#d8e5f8;font-size:14px}
+nav{
+  background:#fff;
+  padding:13px 16px;
+  border-bottom:1px solid #e3e8ef;
+  display:flex;
+  justify-content:center;
+  gap:18px;
+  flex-wrap:wrap
+}
 nav a{color:#2454a6;text-decoration:none;font-size:14px}
+nav a:hover,footer a:hover{text-decoration:underline}
 main{max-width:850px;margin:25px auto;padding:0 16px}
-.hero{background:#e5efff;padding:24px;border-radius:16px;margin-bottom:25px}
-.hero h2{margin-top:0;color:#173c76;font-size:23px}
-.card{background:#fff;border:1px solid #e4e9f0;border-radius:13px;padding:20px;margin:15px 0}
-.card h3{margin-top:0;color:#193d70}
-.tag{font-size:12px;background:#eaf1ff;color:#2854a0;padding:4px 9px;border-radius:20px}
-.button{display:inline-block;background:#2454a6;color:white;text-decoration:none;padding:10px 16px;border-radius:8px}
-h2{font-size:22px}
-small{color:#687386}
-footer{margin-top:45px;background:#152b4a;color:white;padding:25px 20px;text-align:center;font-size:13px}
+.hero{
+  background:#e5efff;
+  padding:25px;
+  border-radius:16px;
+  margin-bottom:30px
+}
+.hero h2{margin-top:0;color:#173c76;font-size:25px;line-height:1.6}
+.hero p{margin-bottom:0}
+.contents,.card{
+  background:#fff;
+  border:1px solid #e1e7f0;
+  border-radius:14px;
+  padding:22px;
+  margin:18px 0
+}
+.contents h2{margin-top:0;font-size:20px}
+.contents ol{margin-bottom:0}
+.contents a{text-decoration:none}
+.card h2,.card h3{color:#193d70;line-height:1.6}
+.card h2{font-size:22px;margin-top:0}
+.card h3{font-size:19px;margin-top:24px}
+.card p:last-child{margin-bottom:0}
+.tag{
+  display:inline-block;
+  font-size:12px;
+  background:#eaf1ff;
+  color:#2854a0;
+  padding:3px 10px;
+  border-radius:20px
+}
+.note{
+  background:#f2f6fc;
+  border-left:4px solid #4778c7;
+  padding:13px 15px;
+  margin:18px 0;
+  border-radius:5px
+}
+.warning{
+  background:#fff5e8;
+  border-left:4px solid #d88a24;
+  padding:13px 15px;
+  margin:18px 0;
+  border-radius:5px
+}
+.button{
+  display:inline-block;
+  background:#2454a6;
+  color:white;
+  text-decoration:none;
+  padding:10px 16px;
+  border-radius:8px
+}
+.button:hover{background:#173c76}
+li{margin:7px 0}
+section[id],article[id]{scroll-margin-top:20px}
+hr{border:0;border-top:1px solid #e4e9f0;margin:28px 0}
+footer{
+  margin-top:45px;
+  background:#152b4a;
+  color:white;
+  padding:28px 20px;
+  text-align:center;
+  font-size:13px
+}
+footer p{margin:8px 0}
 footer a{color:#d8e5f8;margin:0 8px}
-ul{padding-left:22px}
+.small{font-size:13px;color:#687386}
+@media(min-width:700px){
+  main{margin-top:32px}
+  .hero{padding:32px}
+  .card{padding:26px}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+}
 </style>
 </head>
+
 <body>
+
 <header>
-<h1>デジタル生活ラボ</h1>
-<p>知って得する、デジタル社会の実用知識。</p>
+  <div class="header-inner">
+    <h1>デジタル生活ラボ</h1>
+    <p>知って得する、デジタル社会の実用知識。</p>
+  </div>
 </header>
-<nav>
-<a href="#articles">記事一覧</a>
-<a href="#security">安全対策</a>
-<a href="#ai">AI活用</a>
-<a href="about.html">このサイトについて</a>
+
+<nav aria-label="メインナビゲーション">
+  <a href="#articles">記事一覧</a>
+  <a href="#security">ネット安全</a>
+  <a href="#ai">AI活用</a>
+  <a href="#smartphone">スマホ活用</a>
+  <a href="about.html">サイトについて</a>
 </nav>
+
 <main>
+
 <section class="hero">
-<h2>デジタルの「困った」を解決しよう。</h2>
-<p>スマホの便利な使い方、AIによる作業効率化、ネット詐欺から身を守る方法など、日常生活ですぐに役立つ情報をわかりやすく紹介します。</p>
+  <h2>デジタルの「困った」を解決しよう。</h2>
+  <p>
+    スマートフォンの便利な使い方、AIによる作業効率化、
+    ネット詐欺から身を守る方法などを、初心者にも分かりやすく解説します。
+    難しい専門用語をできるだけ避け、日常生活ですぐに実践できる情報を目指します。
+  </p>
 </section>
 
-<h2 id="articles">📚 まず知っておきたい実用知識</h2>
+<section class="contents" aria-label="記事一覧">
+  <h2>📚 読みたいテーマから探す</h2>
+  <ol>
+    <li><a href="#security">ネット詐欺を見分ける7つのポイント</a></li>
+    <li><a href="#clicked">怪しいリンクを開いてしまったときの対処法</a></li>
+    <li><a href="#ai">AIから役立つ回答を引き出す指示の作り方</a></li>
+    <li><a href="#smartphone">スマホの作業時間を減らす5つの工夫</a></li>
+    <li><a href="#privacy">アプリの権限とプライバシーを見直す方法</a></li>
+    <li><a href="#password">パスワードを安全に管理する方法</a></li>
+  </ol>
+</section>
+
+<h2 id="articles">実生活に役立つデジタル知識</h2>
+
 <article class="card" id="security">
-<span class="tag">ネット安全</span>
-<h3>ネット詐欺を見分けるための7つのチェックポイント</h3>
-<p>「アカウントが停止されます」「至急お支払いください」といったメッセージが届いたときは、慌てずに確認しましょう。</p>
-<ul>
-<li>送信元のメールアドレスや電話番号を確認する。</li>
-<li>メッセージ内のリンクをすぐに開かない。</li>
-<li>パスワードや認証コードを他人に教えない。</li>
-<li>「本日限り」など、極端に急がせる表現を警戒する。</li>
-<li>公式アプリや自分で開いた公式サイトから状況を確認する。</li>
-<li>不自然な日本語や、見慣れないドメインに注意する。</li>
-<li>不安な場合は、家族や公的な相談窓口に確認する。</li>
-</ul>
-<p><strong>大切なこと：</strong>ロゴや文章が本物らしく見えても、正規の連絡とは限りません。リンク先ではなく、公式アプリなど別の経路から確認する習慣をつけましょう。</p>
+  <span class="tag">ネット安全</span>
+  <h2>ネット詐欺を見分ける7つのポイント</h2>
+
+  <p>
+    「アカウントが停止されます」「料金が未払いです」
+    「当選しました」といったメールやSMSが届いたときは、
+    すぐにリンクを開かず、内容を落ち着いて確認しましょう。
+    実在する企業やサービスの名前が使われていても、
+    本物の連絡とは限りません。
+  </p>
+
+  <h3>1. 送信元を確認する</h3>
+  <p>
+    表示される会社名だけで判断せず、メールアドレスや電話番号も確認しましょう。
+    ただし、送信元の表示が本物らしく見えても、完全な安全の証明にはなりません。
+  </p>
+
+  <h3>2. メッセージ内のリンクを疑う</h3>
+  <p>
+    ログインや支払いを求めるメッセージでは、
+    リンク先のアドレスを慎重に確認してください。
+    不安な場合はリンクを使わず、公式アプリや、
+    自分で検索して確認した公式サイトからアクセスします。
+  </p>
+
+  <h3>3. 緊急性を強調する表現に注意する</h3>
+  <p>
+    「あと数分で失効」「今日中に支払わないと法的措置」など、
+    考える時間を与えない表現には注意が必要です。
+    急がせる文章だけで本物だと判断しないでください。
+  </p>
+
+  <h3>4. パスワードや認証コードを教えない</h3>
+  <p>
+    パスワードやSMSで届いた認証コードを、
+    メールや電話の相手に安易に伝えてはいけません。
+    相手がサポート担当者を名乗っていても、慎重に対応しましょう。
+  </p>
+
+  <h3>5. 不自然な日本語やアドレスを確認する</h3>
+  <p>
+    不自然な文章、見慣れないドメイン、余分な文字が含まれるURLなどは
+    警戒するポイントです。ただし、文章が自然だからといって
+    安全とは限りません。
+  </p>
+
+  <h3>6. 添付ファイルを安易に開かない</h3>
+  <p>
+    心当たりのない請求書や配送通知などに添付されたファイルは、
+    すぐに開かないでください。送信者に心当たりがある場合も、
+    別の連絡手段で事実を確認すると安心です。
+  </p>
+
+  <h3>7. 別の経路で事実を確認する</h3>
+  <p>
+    メッセージに記載された電話番号ではなく、
+    公式サイトに掲載された問い合わせ先などを利用しましょう。
+    家族や公的な相談窓口に相談することも有効です。
+  </p>
+
+  <div class="note">
+    <strong>覚えておきたいこと：</strong>
+    「リンクを開かない」「認証コードを教えない」
+    「公式アプリから確認する」の3点を習慣にすると、
+    詐欺の被害を防ぐ助けになります。
+  </div>
+
+  <p class="small">
+    不審なメールやSMSへの対応は、サービスの公式案内も確認してください。
+    被害が疑われる場合は、警察や消費生活相談窓口への相談を検討しましょう。
+  </p>
+</article>
+
+<article class="card" id="clicked">
+  <span class="tag">トラブル対処</span>
+  <h2>怪しいリンクを開いてしまったときの対処法</h2>
+
+  <p>
+    怪しいリンクを開いてしまっても、すぐに被害が発生したとは限りません。
+    何をしたかによって対応が異なるため、慌てずに状況を整理しましょう。
+  </p>
+
+  <h3>リンクを開いただけの場合</h3>
+  <ol>
+    <li>ページを閉じる。</li>
+    <li>ファイルをダウンロードしたり、通知を許可したりしない。</li>
+    <li>個人情報やパスワードを入力していないか振り返る。</li>
+    <li>端末やブラウザを最新の状態にする。</li>
+  </ol>
+
+  <h3>パスワードを入力した場合</h3>
+  <ol>
+    <li>本物の公式サイトや公式アプリからパスワードを変更する。</li>
+    <li>同じパスワードを使っている別のサービスも変更する。</li>
+    <li>利用できる場合は多要素認証を設定する。</li>
+    <li>ログイン履歴や登録情報に不審な変更がないか確認する。</li>
+  </ol>
+
+  <h3>カード情報や送金情報を入力した場合</h3>
+  <p>
+    すぐにカード会社や金融機関の公式窓口へ連絡し、
+    利用停止などの対応を相談してください。
+    被害が疑われる場合は、警察や消費生活相談窓口にも相談しましょう。
+  </p>
+
+  <div class="warning">
+    <strong>注意：</strong>
+    不審なアプリをインストールした場合や、
+    端末が遠隔操作されている疑いがある場合は、
+    その端末で銀行などの重要な操作を続けず、
+    安全な別の端末から公式窓口に相談してください。
+  </div>
+
+  <p>
+    どのような操作をしたか分からない場合は、
+    入力した情報、ダウンロードしたファイル、
+    表示された警告などを整理すると、適切な相談につながります。
+  </p>
 </article>
 
 <article class="card" id="ai">
-<span class="tag">AI活用</span>
-<h3>AIに頼むときに便利な指示の出し方</h3>
-<p>AIから役立つ回答を得るには、目的・条件・回答形式を具体的に伝えるのがコツです。</p>
-<ul>
-<li><strong>目的：</strong>何を達成したいか。</li>
-<li><strong>条件：</strong>予算、時間、使える道具など。</li>
-<li><strong>形式：</strong>箇条書き、表、手順など。</li>
-<li><strong>確認：</strong>不明点や事実確認が必要な部分を示してもらう。</li>
-</ul>
-<p><strong>指示の例：</strong>「スマホ初心者向けに、写真の整理方法を3つ、手順と注意点を箇条書きで説明してください。無料で使える方法を優先してください。」</p>
-<p>なお、AIの回答には誤りが含まれる場合があります。お金、健康、法律、安全に関わる内容は、信頼できる情報源でも確認しましょう。</p>
+  <span class="tag">AI活用</span>
+  <h2>AIから役立つ回答を引き出す指示の作り方</h2>
+
+  <p>
+    AIに質問しても、回答が曖昧だったり、
+    自分の希望と違ったりすることがあります。
+    そのようなときは、質問を少し具体的にしてみましょう。
+  </p>
+
+  <h3>指示に含めたい4つの要素</h3>
+  <ul>
+    <li><strong>目的：</strong>何を解決したいのか。</li>
+    <li><strong>条件：</strong>予算、時間、使える道具など。</li>
+    <li><strong>対象：</strong>初心者向けか、詳しい人向けか。</li>
+    <li><strong>回答形式：</strong>箇条書き、表、手順など。</li>
+  </ul>
+
+  <h3>具体例：スマホの写真を整理したい場合</h3>
+  <p>曖昧な指示：</p>
+  <div class="note">スマホの写真を整理する方法を教えて。</div>
+
+  <p>改善した指示：</p>
+  <div class="note">
+    iPhoneを使い始めたばかりの初心者向けに、
+    写真を整理する方法を3つ教えてください。
+    無料でできる方法を優先し、それぞれの手順、
+    メリット、注意点を箇条書きで説明してください。
+  </div>
+
+  <h3>回答を改善する追加質問</h3>
+  <ul>
+    <li>専門用語を使わずに説明してください。</li>
+    <li>手順を1つずつ順番に説明してください。</li>
+    <li>失敗しやすいポイントも教えてください。</li>
+    <li>事実確認が必要な情報と、推測を区別してください。</li>
+  </ul>
+
+  <p>
+    なお、AIは誤った情報をもっともらしく回答する場合があります。
+    パスワードや個人情報を入力せず、
+    お金・健康・法律・安全に関わる重要な内容は、
+    公式情報などでも確認しましょう。
+  </p>
 </article>
 
-<article class="card">
-<span class="tag">スマホ活用</span>
-<h3>スマホで作業時間を減らす5つの工夫</h3>
-<ol>
-<li>よく使う文章を辞書登録しておく。</li>
-<li>通知を見直し、必要なものだけ残す。</li>
-<li>パスワード管理ツールを利用し、使い回しを避ける。</li>
-<li>写真やファイルを定期的に整理する。</li>
-<li>重要なデータはバックアップを取る。</li>
-</ol>
-<p>一度にすべて変える必要はありません。毎日繰り返す作業をひとつ選び、少しずつ改善してみましょう。</p>
+<article class="card" id="smartphone">
+  <span class="tag">スマホ活用</span>
+  <h2>スマホの作業時間を減らす5つの工夫</h2>
+
+  <p>
+    毎日使うスマートフォンは、設定を少し見直すだけでも
+    操作の手間を減らせることがあります。
+    一度にすべて変える必要はありません。
+  </p>
+
+  <h3>1. よく使う文章を辞書登録する</h3>
+  <p>
+    メールの定型文や住所など、繰り返し入力する文章を
+    ユーザー辞書に登録すると、入力時間を短縮できます。
+    個人情報を登録する場合は、端末のロックなども設定しましょう。
+  </p>
+
+  <h3>2. 通知を整理する</h3>
+  <p>
+    必要のない通知を減らすと、作業中に画面を確認する回数を
+    抑えられる場合があります。重要な連絡や防犯に関する通知まで
+    無効にしないよう注意してください。
+  </p>
+
+  <h3>3. パスワード管理を見直す</h3>
+  <p>
+    複数のサービスで同じパスワードを使い回すのは避けましょう。
+    端末や信頼できるパスワード管理ツールの機能を活用し、
+    サービスごとに異なるパスワードを設定するのがおすすめです。
+  </p>
+
+  <h3>4. 写真やファイルを定期的に整理する</h3>
+  <p>
+    不要なスクリーンショットや重複したファイルを整理すると、
+    必要なデータを探しやすくなります。
+    削除前に必要なデータがバックアップされているか確認しましょう。
+  </p>
+
+  <h3>5. 重要なデータをバックアップする</h3>
+  <p>
+    写真や連絡先など、失うと困るデータは定期的にバックアップしましょう。
+    クラウドサービスを利用する場合は、保存容量、料金、
+    アカウントの保護設定も確認してください。
+  </p>
+
+  <div class="note">
+    <strong>今日からできること：</strong>
+    まずは通知設定を見直す、またはよく使う文章を1つ登録するなど、
+    小さな改善から始めてみましょう。
+  </div>
 </article>
 
-<article class="card">
-<span class="tag">プライバシー</span>
-<h3>アプリに許可する権限を見直そう</h3>
-<p>アプリが位置情報、連絡先、写真、マイクなどへのアクセスを求めることがあります。すべてを許可するのではなく、その機能に本当に必要かを考えましょう。</p>
-<ul>
-<li>使っていないアプリの権限を確認する。</li>
-<li>位置情報は必要なときだけ許可できるか確認する。</li>
-<li>使わないアプリは削除を検討する。</li>
-<li>OSやアプリを最新の状態に保つ。</li>
-</ul>
-<p>設定項目や名称は、端末やOSのバージョンによって異なります。</p>
+<article class="card" id="privacy">
+  <span class="tag">プライバシー</span>
+  <h2>アプリの権限とプライバシーを見直す方法</h2>
+
+  <p>
+    アプリは機能に応じて、位置情報、写真、連絡先、カメラ、
+    マイクなどへのアクセスを求めることがあります。
+    すべてを許可するのではなく、用途に合っているか確認しましょう。
+  </p>
+
+  <h3>確認するポイント</h3>
+  <ul>
+    <li>使っていないアプリに不要な権限を与えていないか。</li>
+    <li>位置情報を「使用中のみ」に設定できるか。</li>
+    <li>写真へのアクセスを必要な範囲に制限できるか。</li>
+    <li>不要なアプリを削除できるか。</li>
+    <li>OSやアプリが最新の状態になっているか。</li>
+  </ul>
+
+  <h3>iPhoneの場合</h3>
+  <p>
+    一般的には「設定」から「プライバシーとセキュリティ」を開くと、
+    位置情報サービスやカメラ、マイクなどのアクセスを確認できます。
+    OSのバージョンによって表示や項目名が異なる場合があります。
+  </p>
+
+  <h3>Androidの場合</h3>
+  <p>
+    一般的には「設定」から「プライバシー」や「権限マネージャー」などを開き、
+    アプリごとのアクセス権限を確認できます。
+    メーカーやOSのバージョンによって操作方法は異なります。
+  </p>
+
+  <p>
+    権限を制限すると、アプリの一部機能が利用できなくなる場合があります。
+    その場合は、機能に必要な権限だけを許可することを検討しましょう。
+  </p>
 </article>
 
-<section class="card" id="about">
-<h2>このサイトについて</h2>
-<p>デジタル生活ラボは、スマートフォン、インターネット、AIなどをより安全かつ便利に活用するための情報サイトです。初心者にも理解しやすい説明を心がけ、日常生活に役立つ知識を紹介します。</p>
-<p>掲載情報は一般的な情報提供を目的としています。サービスの仕様やセキュリティ上の注意点は変更されることがあるため、重要な事項は公式情報もご確認ください。</p>
+<article class="card" id="password">
+  <span class="tag">アカウント保護</span>
+  <h2>パスワードを安全に管理する基本ルール</h2>
+
+  <p>
+    パスワードが1つ漏れると、同じパスワードを使っている
+    別のサービスまで不正利用されるおそれがあります。
+    日頃から管理方法を見直すことが大切です。
+  </p>
+
+  <h3>守りたい4つのルール</h3>
+  <ol>
+    <li>サービスごとに異なるパスワードを使う。</li>
+    <li>推測されやすい名前や誕生日だけの組み合わせを避ける。</li>
+    <li>多要素認証が利用できる場合は設定する。</li>
+    <li>不審なログイン通知が届いたら、公式サイトから確認する。</li>
+  </ol>
+
+  <h3>管理が難しいときは</h3>
+  <p>
+    端末に備わっているパスワード管理機能や、
+    信頼できるパスワード管理ツールを検討しましょう。
+    マスターパスワードや復旧方法も安全に管理してください。
+  </p>
+
+  <div class="warning">
+    パスワードや認証コードを、メールやメッセージで届いた
+    不審なリンク先に入力しないでください。
+    セキュリティに関する通知は、公式アプリや公式サイトから確認しましょう。
+  </div>
+</article>
+
+<section class="card" id="site-policy">
+  <h2>このサイトの情報について</h2>
+  <p>
+    デジタル生活ラボは、スマートフォン、インターネット、AIなどを
+    より安全かつ便利に活用するための情報を紹介するサイトです。
+    初心者にも分かりやすく、実践しやすい説明を目指しています。
+  </p>
+  <p>
+    サービスの仕様やセキュリティ上の注意点は変更されることがあります。
+    重要な操作を行う際は、各サービスの公式情報も確認してください。
+    掲載情報の利用にあたっては、ご自身でも内容を確認したうえで判断してください。
+  </p>
+  <p><a href="about.html">サイトの詳細・運営方針はこちら</a></p>
 </section>
+
+<section class="card" id="contact">
+  <h2>お問い合わせ</h2>
+  <p>
+    当サイトへのご意見・ご質問は、以下のメールアドレスまでご連絡ください。
+  </p>
+  <p>
+    <a class="button" href="mailto:a72672528@gmail.com">メールでお問い合わせ</a>
+  </p>
+  <p class="small">
+    個人情報やパスワードなどの重要な情報は、メールに記載しないでください。
+  </p>
+</section>
+
 </main>
+
 <footer>
-<p>© 2026 デジタル生活ラボ</p>
-<p><a href="privacy.html">プライバシーポリシー</a></p>
+  <p>© 2026 デジタル生活ラボ</p>
+  <p>
+    <a href="about.html">サイトについて</a>
+    <a href="privacy.html">プライバシーポリシー</a>
+    <a href="mailto:a72672528@gmail.com">お問い合わせ</a>
+  </p>
+  <p>デジタル社会を、より安全で便利に。</p>
 </footer>
+
 </body>
 </html>
